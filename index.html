@@ -25,17 +25,10 @@
     .snow {
       position:absolute;
       top:0; left:0;
-      width:100%; height:200%; /* double height for smooth scroll */
-      background-image:url('https://i.postimg.cc/8P0wqV7C/snow-overlay.png');
-      background-repeat:repeat;
-      animation: snowfall 12s linear infinite;
+      width:100%; height:100%;
+      background:url('https://i.postimg.cc/8P0wqV7C/snow-overlay.png') repeat;
       opacity:0.7;
       pointer-events:none;
-    }
-
-    @keyframes snowfall {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-50%); }
     }
   </style>
 </head>
