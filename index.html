@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lich King Snow</title>
+  <style>
+    html, body {
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      width:100%;
+      height:100%;
+      background:#000;
+    }
+
+    .bg {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:url('https://i.postimg.cc/28fHwjB4/Test-lich-king.jpg') center/cover no-repeat;
+      filter:contrast(1.1) saturate(1.1);
+    }
+
+    .snow {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      pointer-events:none;
+      background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+      background-size: 3px 3px, 2px 2px, 1px 1px;
+      animation: snow 10s linear infinite;
+    }
+
+    @keyframes snow {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="snow"></div>
+</body>
+</html>
