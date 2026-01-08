@@ -18,26 +18,24 @@
       top:0; left:0;
       width:100%; height:100%;
       background:url('https://i.postimg.cc/28fHwjB4/Test-lich-king.jpg') center top no-repeat;
-      background-size: contain; /* show full image */
-      background-color: black;  /* fill empty space */
+      background-size: contain;
+      background-color: black;
     }
 
     .snow {
       position:absolute;
       top:0; left:0;
-      width:100%; height:100%;
+      width:100%; height:200%; /* double height for smooth scroll */
+      background-image:url('https://i.postimg.cc/8P0wqV7C/snow-overlay.png');
+      background-repeat:repeat;
+      animation: snowfall 12s linear infinite;
+      opacity:0.7;
       pointer-events:none;
-      background-image:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(white 1px, transparent 1px);
-      background-size: 4px 4px, 2px 2px;
-      animation: snow 18s linear infinite;
-      opacity: 0.7;
     }
 
-    @keyframes snow {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100%); }
+    @keyframes snowfall {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
     }
   </style>
 </head>
